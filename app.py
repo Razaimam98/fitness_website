@@ -1,47 +1,53 @@
-from flask import Flask, render_template, send_from_directory
-import os
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-# --------- Home Page ---------
+# Home page
 @app.route('/')
 def home():
     return render_template('home.html')
 
-# --------- About Page ---------
+# About page
 @app.route('/about')
 def about():
     return render_template('about.html')
 
-# --------- Privacy Policy Page ---------
-@app.route('/privacy-policy')
-def privacy_policy():
-    return render_template('privacy.html')
-
-# --------- Blog Pages ---------
+# Nutrition page
 @app.route('/nutrition')
 def nutrition():
     return render_template('nutrition.html')
 
+# Motivation page
 @app.route('/motivation')
 def motivation():
     return render_template('motivation.html')
 
+# Supplements page
 @app.route('/supplements')
 def supplements():
     return render_template('supplements.html')
 
+# Workout page
 @app.route('/workout')
 def workout():
     return render_template('workout.html')
 
-# --------- Sitemap Route ---------
-@app.route('/sitemap.xml')
-def sitemap():
-    """Serve sitemap.xml from the project root"""
-    return send_from_directory(os.path.join(app.root_path), 'sitemap.xml')
+# Blog page
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
 
-# --------- Run App ---------
+# Privacy Policy page
+@app.route('/privacy-policy')
+def privacy_policy():
+    return render_template('privacy_policy.html')
+
+# Email subscription (dummy)
+@app.route('/subscribe', methods=['POST'])
+def subscribe():
+    email = request.form.get('email')
+    # Here you can add code to save email in database or send to mailing list
+    return redirect(url_for('home'))
+
 if __name__ == '__main__':
-    # Use debug=True only for local development
     app.run(debug=True)

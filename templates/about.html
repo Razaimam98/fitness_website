@@ -1,25 +1,9 @@
 {% extends 'base.html' %}
-{% block title %}About - Raza Fitness{% endblock %}
+
+{% block title %}About - FitPro{% endblock %}
 
 {% block content %}
-<section class="blog">
-    <h1>About Raza Fitness</h1>
-    <p><strong>By Raza | Updated: Oct 2025 | 3 min read</strong></p>
-
-    <img src="{{ url_for('static', filename='images/fitness-cover.jpg') }}" alt="Fitness training" style="width:100%; border-radius:10px; margin:15px 0;">
-
-    <h2>Our Mission</h2>
-    <p>At Raza Fitness, our mission is simple: to help you achieve your fitness goals through the perfect combination of training, nutrition, and motivation.</p>
-
-    <h2>What We Offer</h2>
-    <ul>
-        <li>Workout Plans: Structured routines for beginners to advanced athletes.</li>
-        <li>Nutrition Guidance: Vegetarian-friendly meal ideas and protein sources.</li>
-        <li>Motivation & Mindset: Tips and strategies to stay consistent and disciplined.</li>
-        <li>Supplement Advice: Evidence-based recommendations for vegetarian-friendly supplements.</li>
-    </ul>
-
-    <h2>About Raza</h2>
-    <p>Raza is a fitness enthusiast passionate about helping people transform their bodies and minds.</p>
-</section>
+<h1>About FitPro</h1>
+<p>FitPro is your go-to platform for fitness guidance, nutrition tips, and motivational content.</p>
+<img src="{{ url_for('static', filename='images/fitness-cover.jpg') }}" alt="Fitness training" style="width:100%; border-radius:10px; margin:15px 0;">
 {% endblock %}
