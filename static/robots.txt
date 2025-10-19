@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /venv/
+Disallow: /static/css/
+Disallow: /static/js/
+Allow: /
+
+Sitemap: https://www.yourdomain.com/sitemap.xml
