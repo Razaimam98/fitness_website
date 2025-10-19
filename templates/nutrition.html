@@ -1,29 +1,22 @@
 {% extends 'base.html' %}
-{% block title %}Nutrition - Raza Fitness{% endblock %}
+
+{% block title %}Nutrition - FitPro{% endblock %}
+
 {% block content %}
-<section class="blog">
-    <h1>Top Nutrition Tips for Muscle Growth</h1>
-    <p><strong>By Raza | Updated: Oct 2025 | 6 min read</strong></p>
+<h1 style="text-align:center; margin-bottom: 20px;">Nutrition</h1>
+<p style="text-align:center; margin-bottom: 40px;">Healthy eating tips, meal plans, and nutrition advice for your fitness journey.</p>
 
-    <img src="{{ url_for('static', filename='images/protein-foods.jpg') }}" alt="Protein rich foods" style="width:100%; border-radius:10px; margin:15px 0;">
+<div class="content-section">
+    <div class="content-box">
+        <img src="{{ url_for('static', filename='images/nutrition.jpg') }}" class="content-img" alt="Nutrition">
+        <h4>Healthy Meals</h4>
+        <p>Balanced diet plans to fuel your body effectively.</p>
+    </div>
 
-    <h2>1. Protein: The Building Block of Muscles</h2>
-    <p>Protein is essential for muscle recovery and growth. Whether you are bulking or cutting, you need a steady intake of high-quality protein to repair muscle tissues after intense workouts. Sources include lentils, chickpeas, tofu, soy milk, peanuts, Greek yogurt, and whey protein powder.</p>
-
-    <img src="{{ url_for('static', filename='images/vegetarian-protein.jpg') }}" alt="Vegetarian protein sources" style="width:100%; border-radius:10px; margin:15px 0;">
-
-    <p>Aim for 1.6–2.2 grams of protein per kilogram of body weight. Divide your protein intake evenly throughout the day for best results. A simple example — if you weigh 70 kg, consume around 110–130 grams of protein daily.</p>
-
-    <h2>2. Complex Carbohydrates for Energy</h2>
-    <p>Carbs fuel your training sessions. Choose complex carbs like oats, brown rice, quinoa, and sweet potatoes for sustained energy release. Avoid refined sugars as they spike insulin levels and cause fatigue.</p>
-
-    <h2>3. Healthy Fats for Hormone Support</h2>
-    <p>Healthy fats from nuts, olive oil, and avocados help maintain testosterone levels and promote overall hormonal balance, which is vital for muscle gain and fat loss.</p>
-
-    <h2>4. Hydration and Micronutrients</h2>
-    <p>Water plays a crucial role in digestion, muscle contraction, and recovery. Don’t neglect fruits and vegetables — they provide vitamins and minerals that support metabolism and immunity.</p>
-
-    <h3>💡 Key Takeaway:</h3>
-    <p>Nutrition isn’t just about eating more — it’s about eating smarter. Focus on whole foods, balance macros, and stay consistent. Your body is built in the kitchen as much as in the gym!</p>
-</section>
+    <div class="content-box">
+        <img src="{{ url_for('static', filename='images/vegetarian-protein.jpg') }}" class="content-img" alt="Protein Foods">
+        <h4>Protein Sources</h4>
+        <p>Discover the best protein-rich foods for muscle growth.</p>
+    </div>
+</div>
 {% endblock %}

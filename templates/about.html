@@ -3,7 +3,20 @@
 {% block title %}About - FitPro{% endblock %}
 
 {% block content %}
-<h1>About FitPro</h1>
-<p>FitPro is your go-to platform for fitness guidance, nutrition tips, and motivational content.</p>
-<img src="{{ url_for('static', filename='images/fitness-cover.jpg') }}" alt="Fitness training" style="width:100%; border-radius:10px; margin:15px 0;">
+<h1 style="text-align:center; margin-bottom: 20px;">About Us</h1>
+<p style="text-align:center; margin-bottom: 40px;">We are passionate about fitness and wellness, guiding you to achieve your goals.</p>
+
+<div class="content-section">
+    <div class="content-box">
+        <img src="{{ url_for('static', filename='images/about.jpg') }}" class="content-img" alt="About Us">
+        <h4>Our Mission</h4>
+        <p>Helping people live healthier and more active lifestyles.</p>
+    </div>
+
+    <div class="content-box">
+        <img src="{{ url_for('static', filename='images/team.jpg') }}" class="content-img" alt="Our Team">
+        <h4>Our Team</h4>
+        <p>A dedicated team of fitness experts and nutritionists.</p>
+    </div>
+</div>
 {% endblock %}

@@ -3,6 +3,20 @@
 {% block title %}Blog - FitPro{% endblock %}
 
 {% block content %}
-<h1>Our Fitness Blog</h1>
-<p>Read tips, workout guides, nutrition advice, and motivational articles here.</p>
+<h1 style="text-align:center; margin-bottom: 20px;">Blog</h1>
+<p style="text-align:center; margin-bottom: 40px;">Latest articles, tips, and guides to improve your health and fitness lifestyle.</p>
+
+<div class="content-section">
+    <div class="content-box">
+        <img src="{{ url_for('static', filename='images/blog.jpg') }}" class="content-img" alt="Blog">
+        <h4>Fitness Tips</h4>
+        <p>Explore simple tips to enhance your workouts and nutrition.</p>
+    </div>
+
+    <div class="content-box">
+        <img src="{{ url_for('static', filename='images/lifestyle.jpg') }}" class="content-img" alt="Lifestyle">
+        <h4>Healthy Lifestyle</h4>
+        <p>Learn habits and routines for a balanced and active life.</p>
+    </div>
+</div>
 {% endblock %}

@@ -1,41 +1,22 @@
 {% extends 'base.html' %}
-{% block title %}Supplements - Raza Fitness{% endblock %}
+
+{% block title %}Supplements - FitPro{% endblock %}
+
 {% block content %}
-<section class="blog">
-    <h1>Best Supplements for Muscle Growth and Recovery (Vegetarian Friendly)</h1>
-    <p><strong>By Raza | Updated: Oct 2025 | 8 min read</strong></p>
+<h1 style="text-align:center; margin-bottom: 20px;">Supplements</h1>
+<p style="text-align:center; margin-bottom: 40px;">Learn which supplements can improve workouts, recovery, and overall health.</p>
 
-    <img src="{{ url_for('static', filename='images/supplements-cover.jpg') }}" alt="Fitness supplements" style="width:100%; border-radius:10px; margin:15px 0;">
+<div class="content-section">
+    <div class="content-box">
+        <img src="{{ url_for('static', filename='images/supplements.jpg') }}" class="content-img" alt="Supplements">
+        <h4>Protein Supplements</h4>
+        <p>Boost your muscle growth with the right protein powders.</p>
+    </div>
 
-    <p>Supplements are not magic, but when combined with the right training and diet, they can take your results to the next level. Especially for vegetarians, certain nutrients can be harder to get from food alone — that’s where smart supplementation helps. Here are the top supplements to support your strength, energy, and recovery.</p>
-
-    <h2>1. Whey Protein (or Plant Protein)</h2>
-    <img src="{{ url_for('static', filename='images/whey-protein.jpg') }}" alt="Whey protein shake" style="width:100%; border-radius:10px; margin:15px 0;">
-    <p>Protein is essential for muscle repair and growth. Whey protein is the fastest-digesting form, making it ideal post-workout. If you’re vegetarian, plant-based protein blends (like pea + brown rice protein) provide an excellent alternative without compromising amino acid balance.</p>
-
-    <p><strong>Recommended Intake:</strong> 1 scoop (20–25g protein) within 30 minutes after your workout.</p>
-
-    <h2>2. Creatine Monohydrate</h2>
-    <img src="{{ url_for('static', filename='images/creatine.jpg') }}" alt="Creatine powder" style="width:100%; border-radius:10px; margin:15px 0;">
-    <p>Creatine is one of the most researched and proven supplements in the world. It increases muscle strength, power output, and endurance. For vegetarians, it’s even more effective since natural creatine from meat sources is missing from the diet.</p>
-
-    <p><strong>How to use:</strong> 3–5g daily (with water or juice). No loading phase needed.</p>
-
-    <h2>3. BCAAs or EAAs</h2>
-    <img src="{{ url_for('static', filename='images/bcaas.jpg') }}" alt="BCAA drink" style="width:100%; border-radius:10px; margin:15px 0;">
-    <p>During intense workouts, BCAAs (Branched Chain Amino Acids) help reduce muscle breakdown and improve recovery. However, a complete EAA (Essential Amino Acid) supplement is even better as it provides the full amino acid profile your body needs for muscle protein synthesis.</p>
-
-    <p><strong>When to take:</strong> Sip during your workout or between meals.</p>
-
-    <h2>4. Multivitamins & Omega-3 (Plant-Based)</h2>
-    <img src="{{ url_for('static', filename='images/omega3.jpg') }}" alt="Plant-based omega 3" style="width:100%; border-radius:10px; margin:15px 0;">
-    <p>Vitamins and minerals play a key role in energy, recovery, and immune function. Look for multivitamins with Vitamin B12, D3, and Iron — especially for vegetarians. Plant-based Omega-3 (from algae oil) supports heart and joint health, helping you train harder for longer.</p>
-
-    <h2>5. Ashwagandha (Natural Testosterone & Strength Booster)</h2>
-    <img src="{{ url_for('static', filename='images/ashwagandha.jpg') }}" alt="Ashwagandha supplement" style="width:100%; border-radius:10px; margin:15px 0;">
-    <p>Used in Ayurvedic medicine for centuries, Ashwagandha helps reduce stress, improve testosterone levels naturally, and enhance muscle recovery. It’s one of the best natural supplements for improving strength and stamina without side effects.</p>
-
-    <h3>💡 Key Takeaway:</h3>
-    <p>Supplements are just that — *supplementary*. Focus on whole foods first, but use these natural enhancers to fill the nutritional gaps and accelerate your results. For a clean, vegetarian fitness journey, pair these supplements with a high-protein diet, consistency, and smart recovery.</p>
-</section>
+    <div class="content-box">
+        <img src="{{ url_for('static', filename='images/vitamins.jpg') }}" class="content-img" alt="Vitamins">
+        <h4>Vitamins & Minerals</h4>
+        <p>Essential nutrients to support energy and immunity.</p>
+    </div>
+</div>
 {% endblock %}

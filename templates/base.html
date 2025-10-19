@@ -1,59 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}FitPro{% endblock %}</title>
-    <meta name="description" content="FitPro: Professional fitness guidance, nutrition tips, motivational blogs, and workout plans.">
-    <meta name="keywords" content="Fitness, Workout, Nutrition, Supplements, Motivation">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <!-- Header / Navigation -->
-    <header>
-        <nav class="navbar">
-            <a href="{{ url_for('home') }}">Home</a>
-            <a href="{{ url_for('about') }}">About</a>
-            <a href="{{ url_for('nutrition') }}">Nutrition</a>
-            <a href="{{ url_for('motivation') }}">Motivation</a>
-            <a href="{{ url_for('supplements') }}">Supplements</a>
-            <a href="{{ url_for('workout') }}">Workout</a>
-            <a href="{{ url_for('blog') }}">Blog</a>
-            <a href="{{ url_for('privacy_policy') }}">Privacy Policy</a>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
-                    <li><a href="{{ url_for('nutrition') }}">Nutrition</a></li>
-                    <li><a href="{{ url_for('motivation') }}">Motivation</a></li>
-                    <li><a href="{{ url_for('supplements') }}">Supplements</a></li>
-                    <li><a href="{{ url_for('workout') }}">Workout</a></li>
-                    <li><a href="{{ url_for('blog') }}">Blog</a></li>
-                    <li><a href="{{ url_for('privacy_policy') }}">Privacy Policy</a></li>
-                </ul>
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <h3>Quick Links</h3>
+        <div class="footer-links-grid">
+            <!-- Home -->
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/home.jpg') }}" alt="Home" class="footer-img">
+                <h4><a href="{{ url_for('home') }}">Home</a></h4>
+                <p>Welcome to your ultimate fitness hub with tips and guides.</p>
             </div>
 
-            <div class="footer-subscribe">
-                <h3>Subscribe for Updates</h3>
-                <form action="{{ url_for('subscribe') }}" method="POST">
-                    <input type="email" name="email" placeholder="Enter your email" required>
-                    <button type="submit">Subscribe</button>
-                </form>
+            <!-- About -->
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="About" class="footer-img">
+                <h4><a href="{{ url_for('about') }}">About</a></h4>
+                <p>Learn more about our fitness philosophy and team.</p>
+            </div>
+
+            <!-- Nutrition -->
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/nutrition.jpg') }}" alt="Nutrition" class="footer-img">
+                <h4><a href="{{ url_for('nutrition') }}">Nutrition</a></h4>
+                <p>Discover healthy diet plans and protein-rich meals.</p>
+            </div>
+
+            <!-- Motivation -->
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/motivation.jpg') }}" alt="Motivation" class="footer-img">
+                <h4><a href="{{ url_for('motivation') }}">Motivation</a></h4>
+                <p>Get inspired with fitness tips and success stories.</p>
+            </div>
+
+            <!-- Supplements -->
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/supplements.jpg') }}" alt="Supplements" class="footer-img">
+                <h4><a href="{{ url_for('supplements') }}">Supplements</a></h4>
+                <p>Learn which supplements support your fitness goals.</p>
+            </div>
+
+            <!-- Workout -->
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/workout.jpg') }}" alt="Workout" class="footer-img">
+                <h4><a href="{{ url_for('workout') }}">Workout</a></h4>
+                <p>Follow workouts and training plans for all levels.</p>
+            </div>
+
+            <!-- Blog -->
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/blog.jpg') }}" alt="Blog" class="footer-img">
+                <h4><a href="{{ url_for('blog') }}">Blog</a></h4>
+                <p>Read latest fitness blogs, tips, and guides.</p>
+            </div>
+
+            <!-- Privacy Policy -->
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/privacy.jpg') }}" alt="Privacy Policy" class="footer-img">
+                <h4><a href="{{ url_for('privacy_policy') }}">Privacy Policy</a></h4>
+                <p>Understand how we handle your data securely.</p>
             </div>
         </div>
-        <p>© 2025 FitPro. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+
+        <!-- Subscribe -->
+        <div class="footer-subscribe">
+            <h3>Subscribe for Updates</h3>
+            <form action="{{ url_for('subscribe') }}" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</footer>
