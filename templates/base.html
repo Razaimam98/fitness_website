@@ -4,25 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Page Title -->
+    <!-- Title block -->
     <title>{% block title %}FitPro{% endblock %}</title>
-    
+
     <!-- SEO Meta -->
     <meta name="description" content="FitPro: Professional fitness guidance, nutrition tips, motivational blogs, and workout plans.">
     <meta name="keywords" content="Fitness, Workout, Nutrition, Supplements, Motivation">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="{% block title %}FitPro{% endblock %}">
-    <meta property="og:description" content="Get expert workout tips, nutrition advice, motivational blogs, and supplements guidance.">
-    <meta property="og:image" content="{{ url_for('static', filename='images/fitness-cover.jpg', _external=True) }}">
-    <meta property="og:url" content="{{ request.url }}">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="{{ request.url }}">
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="{{ self.title() }}">
+    <meta property="og:description" content="FitPro: Professional fitness guidance, nutrition tips, motivational blogs, and workout plans.">
+    <meta property="og:type" content="website">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -50,7 +42,6 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <!-- Quick Links -->
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -65,16 +56,9 @@
                 </ul>
             </div>
 
-            <!-- Subscribe Form -->
             <div class="footer-subscribe">
                 <h3>Subscribe for Updates</h3>
                 <form action="{{ url_for('subscribe') }}" method="POST">
                     <input type="email" name="email" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
                 </form>
-            </div>
-        </div>
-        <p>© 2025 FitPro. All rights reserved.</p>
-    </footer>
-</body>
-</html>
