@@ -5,13 +5,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #111; /* dark background */
+    color: #fff; /* white text */
 }
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
    Navbar
 ======================= */
 .navbar {
-    background-color: #2c3e50;
+    background-color: #222; /* dark navbar */
     padding: 15px 20px;
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar a {
-    color: #fff;
+    color: #f00; /* red links */
     font-weight: bold;
     padding: 5px 10px;
     transition: background 0.3s, color 0.3s;
@@ -38,8 +38,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar a:hover {
-    background-color: #34495e;
-    color: #f1c40f;
+    background-color: #444;
+    color: #fff;
 }
 
 /* =======================
@@ -55,14 +55,14 @@ main {
    Footer
 ======================= */
 footer {
-    background-color: #2c3e50;
+    background-color: #222;
     color: #fff;
     padding: 30px 20px;
     text-align: center;
 }
 
 footer a {
-    color: #f1c40f;
+    color: #f00;
 }
 
 footer a:hover {
@@ -105,8 +105,8 @@ footer input[type="email"] {
 footer button {
     padding: 8px 12px;
     border: none;
-    background-color: #f1c40f;
-    color: #2c3e50;
+    background-color: #f00; /* red button */
+    color: #fff;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
@@ -118,11 +118,11 @@ footer button:hover {
 }
 
 /* =======================
-   Medium Images (120x120)
+   Medium Images (200x200)
 ======================= */
 .footer-img, .content-img {
-    width: 120px;
-    height: 120px;
+    width: 200px; /* medium size */
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -132,7 +132,7 @@ footer button:hover {
 }
 
 /* =======================
-   Content Section Images
+   Content Section Boxes
 ======================= */
 .content-section {
     display: flex;
@@ -144,10 +144,10 @@ footer button:hover {
 
 .content-box {
     width: 250px;
-    background-color: #fff;
+    background-color: #333; /* dark box */
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
     text-align: center;
 }
 
@@ -167,7 +167,3 @@ footer button:hover {
         align-items: center;
     }
     .content-section {
-        flex-direction: column;
-        align-items: center;
-    }
-}
